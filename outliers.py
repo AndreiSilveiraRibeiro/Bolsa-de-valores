@@ -26,6 +26,10 @@ outliers = z_score[z_score['z-score'] > 1].copy()
 ranking_outliers = outliers.sort_values(by='z-score', ascending=False)
 ranking_outliers['posicao_ranking'] = range(1, len(ranking_outliers) + 1)
 
+correlacao = tabela_final['rentabilidade_dia'].corr(tabela_final['cotacao'], method='spearman')
+
+print(f"\nCorrelação entre rentabilidade por dia e cotação: {correlacao}")
+
 # ===== Visualizando o Top 10 Maiores Outliers da Base =====
 
 print("\n===== TOP 10 MAIORES OUTLIERS DETECTADOS =====")
@@ -34,7 +38,6 @@ print(ranking_outliers[colunas_exibicao].head(10).to_string(index=False))
 
 # Exportar a tabela limpa para o Power BI
 tabela_final.to_csv("tbl_final_processada.csv", index=False)
-
 # Exportar o ranking de outliers para a aba de Auditoria do seu Dashboard
 ranking_outliers[colunas_exibicao].to_csv("ranking_outliers_auditoria.csv", index=False)
 
