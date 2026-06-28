@@ -1,6 +1,6 @@
 # Bolsa de valores
 
-Este projeto consiste em um pipeline completo de Engenharia de Dados (ETL) e Análise Exploratória, focado na higienização de dados financeiros, tratamento estatístico de anomalias e visualização de performance para tomada de decisão.
+Este projeto apresenta um pipeline robusto de **Engenharia de Dados (ETL)** e **Análise Exploratória**, focado na higienização de ativos financeiros, **tratamento estatístico** de anomalias e **visualização de KPIs** para suporte à decisão. O dashboard integrado oferece uma visão 360º da performance, incluindo análise de rentabilidade por categoria, tendências de fluxo de rendimento ao longo do tempo e o ranking de eficiência mensal dos fundos.
 
 ![Dashboard de Performance de Fundos](Dashboard.png)
 
